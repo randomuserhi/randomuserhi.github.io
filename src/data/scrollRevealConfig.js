@@ -23,9 +23,16 @@ export const targetElements = [
     },
   },
   {
-    element: ".hero-cta",
+    element: ".hero-social-links",
     animation: {
       delay: 1000,
+      origin: window.innerWidth > 768 ? "left" : "bottom",
+    },
+  },
+  {
+    element: ".hero-cta",
+    animation: {
+      delay: 1500,
       origin: window.innerWidth > 768 ? "left" : "bottom",
     },
   },
@@ -41,6 +48,19 @@ export const targetElements = [
     animation: {
       delay: 1000,
       origin: window.innerWidth > 768 ? "left" : "bottom",
+    },
+  },{
+    element: ".experiences-wrapper__text",
+    animation: {
+      delay: 500,
+      origin: window.innerWidth > 768 ? "left" : "bottom",
+    },
+  },
+  {
+    element: ".experiences-wrapper__image",
+    animation: {
+      delay: 1000,
+      origin: window.innerWidth > 768 ? "right" : "bottom",
     },
   },
   {
