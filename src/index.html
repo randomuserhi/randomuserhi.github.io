@@ -88,10 +88,7 @@
           <div class="col-md-6 col-sm-12">
             <div class="about-wrapper__info load-hidden">
               <p class="about-wrapper__info-text">
-                I'm a computer science undergraduate studying at Durham University and have been developing now for more than 5 years, having done projects at MediaTek, Toshiba and AIXTRON. I love to work on projects that expand my current knowledge and skills. I use C/C++, C#, HLSL, Java, Javascript, HTML, CSS, Python and MatLab. I also am proficient with 3D and web development technologies such as Unity, Unreal, Node.js, React.js, Three.js, Parcel.js and OpenSfM. 
-              </p>
-              <p class="about-wrapper__info-text">
-                My hobbies include Machine Learning with Neural Networks and Game development from Physics Engines to Shaders and Game Design.
+                Computer science undergraduate student at Durham University with more than 5 years of developing experience. Previous projects at MediaTek, Toshiba and AIXTRON. Skilled in C/C++, C#, HLSL, Java, Javascript, HTML, CSS, Python and MatLab. Proficient with 3D and web development technologies such as Unity, Unreal, Node.js, React.js, Three.js, Parcel.js, TensorFlow and OpenSfM. Interested in Machine Learning, Neural Networks, Physics Engines and Game Design.
               </p>
               <span class="d-flex mt-3">
                 <a
@@ -100,7 +97,7 @@
                   class="cta-btn cta-btn--resume"
                   href="assets/resume.pdf"
                 >
-                  View Resume
+                  View CV / Resume
                 </a>
               </span>
             </div>
@@ -123,13 +120,13 @@
                 <h3 class="experiences-wrapper__text-title">Data Collection and 3D Reconstruction using OpenSfM</h3>
                 <div>
                   <p class="mb-4">
-                    Collected equirectangular images of cambridge to reconstruct 3D models of the city for visual deep learning research.<br/>
+                    Collected equirectangular images of Cambridge and reconstructed 3D models of the city for visual deep learning research.<br/>
                     Reconstruction performed using OpenSfM library running on GPU rack with multiple nvidia cards.<br/>
                     Programmed tool to extract GPS quardinates and Fisheye image from RAW files.
                   </p>
                 </div>
                 <p class="footer__text">
-                  Toshiba (Cambridge Research Laboratory), Cambridge, UK <br/>
+                  <b>Toshiba (Cambridge Research Laboratory)</b>, Cambridge, UK <br/>
                   July - August 2021
                 </p>
                 <!--<a
@@ -187,7 +184,7 @@
                   </p>
                 </div>
                 <p class="footer__text">
-                  MediaTek (MTK Wireless Ltd), Cambourne, UK <br/>
+                  <b>MediaTek (MTK Wireless Ltd)</b>, Cambourne, UK <br/>
                   July 2019, July 2018, August 2017 
                 </p>
                 <!--<a
@@ -239,12 +236,12 @@
                   <p class="mb-4">
                     Created intuitive touchscreen GUI’s for AIXTRON batch and roll-to-roll chemical vapour deposition reactors for depositing graphene. <br/>
                     Using the interface, the user can use an automatic recipe or manually control flow rates of gases, valves, temperatures and the machine’s operating state. <br/>
-                    Created online tool to analyse machine data/logs to create data trees based on events for easy navigation <br/>
+                    Created online tool to analyse machine data/logs to create data trees based on events for easy navigation. <br/>
                     Developed in HTML5, JavaScript, Structured Text (TwinCAT 3).
                   </p>
                 </div>
                 <p class="footer__text">
-                  AIXTRON Ltd, Swavesey, UK <br/>
+                  <b>AIXTRON Ltd</b>, Swavesey, UK <br/>
                   August 2018 and 2019
                 </p>
                 <!--<a
@@ -296,16 +293,18 @@
     <section id="projects">
       <div class="container">
         <div class="project-wrapper">
-          <h2 class="section-title">Projects</h2>
+          <h2 class="section-title">Selected Projects</h2>
 
           <!-- Notice: each .row is a project -->
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Durhack 2022 Olympic medal predictor</h3>
+                <h3 class="project-wrapper__text-title">Olympic Oracle<br/><i>Durhack 2022 - Winner</i></h3>
                 <div>
                   <p class="mb-4">
-                    I worked in the winning team for durhack 2022 making a data analysist program utilizing sentimental analysis, historical analysis and machine learning to predict the chances of an athlete in the olympics winning a gold, silver or bronze medal.
+                    Platinum prize (sponsored by Alteryx) winner of Durhack 2022 where my team made a data analysist program to predict Olympic medal winners over 24 hours.<br/>
+                    I implemented the neural network back-end using TensorFlow.<br/>
+                    This performed machine learning on past data to predict the chances of an athlete possessing certain physical characteristics winning a gold, silver or bronze medal at the Olympics.
                   </p>
                 </div>
                 <a
@@ -319,8 +318,8 @@
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  class="cta-btn"
-                  style="color: white;"
+                  class="cta-btn cta-btn--resume"
+                  style="margin-left: 1.5rem;"
                   href="https://github.com/johnny-stevie/Durhack2022"
                 >
                   Source Code
@@ -329,7 +328,7 @@
             </div>
             <div class="col-lg-8 col-sm-12">
               <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="https://www.toshiba.eu/pages/eu/Cambridge-Research-Laboratory/computer-vision" target="_blank">
+                <a rel="noreferrer" href="https://devpost.com/software/olympic-oracle" target="_blank">
                   <div
                     data-tilt
                     data-tilt-max="4"
@@ -353,10 +352,276 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Cambridge Blue Plaques Website</h3>
+                <h3 class="project-wrapper__text-title">User Interface Project<br/><i>Prog Black(belt)</i></h3>
                 <div>
                   <p class="mb-4">
-                    I helped create the blue plaque website getting a reward from the mayor.
+                    Inspired by Roslyn/Codepen, I created a web based technology, that I named "Muffin.js", for runtime evaluation of scripting for creating light weight javascript apps on an online, fully responsive, (cloud) desktop.<br>
+                    People can create packages or modules that can be imported into other apps.</br>
+                    Example modules that I wrote to demonstrate Muffin's capabilities include a 2D physics module, a simple machine learning module and the base muffins module.
+                  </p>
+                </div>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--resume"
+                  href="http://www.kennano.com/cteo/Muffin_Coursework.mp4"
+                >
+                  Showcase
+                </a>
+                <!--<a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn"
+                  style="color: white;"
+                  href="https://github.com/randomuserhi/Enter-The-Dead-Zone"
+                >
+                  Source Code
+                </a>-->
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="http://www.kennano.com/cteo/Muffin_Coursework.mp4" target="_blank">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <img
+                      alt="Project Image"
+                      class="img-fluid"
+                      src="assets/muffins.png"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Computational Neural Network<br/><i>Image classifier</i></h3>
+                <div>
+                  <p class="mb-4">
+                    Implemented from the ground up a neural network for classifying images.<br/>
+                    Uses 6 convolutional layers, pooling and flattening layers and 3 dense layers.<br/>
+                    Wrote an API for C++ Eigen library so Unity/C# can use it for matrix calculations.<br/>
+                    Runs on GPU using HLSL.</br>
+                    CNN distinguishes cars from trucks.</br>
+                  </p>
+                </div>
+                <!--<a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--resume"
+                  href="https://github.com/randomuserhi/CNN"
+                >
+                  Source Code
+                </a>-->
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--resume"
+                  href="https://github.com/randomuserhi/CNN"
+                >
+                  Source Code
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="https://github.com/randomuserhi/CNN" target="_blank">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <img
+                      alt="Project Image"
+                      class="img-fluid"
+                      src="assets/cnn.png"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Unity 2D/3D Projects<br/><i>GameJam/Hobbies</i></h3>
+                <div>
+                  <p class="mb-4">
+                    Experience in creating 2D / 3D animation.<br/>
+                    Participated in GameJam to create sprite-based game in 48 hours.<br/>
+                    Parallax, HLSL, vertex shaders, transformations.<br/>
+                  </p>
+                </div>
+                <!--<a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--resume"
+                  href="https://github.com/randomuserhi/CNN"
+                >
+                  Source Code
+                </a>-->
+                <!--<a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--resume"
+                  href="https://github.com/randomuserhi/CNN"
+                >
+                  Source Code
+                </a>-->
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <video autoplay muted loop class="img-fluid">
+                      <source src="assets/rendering.mp4" type="video/mp4">
+                      Your browser does not support HTML5 video.
+                    </video>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Smart WiFi Pill Dispenser<br/><i>GCSE Design and Tech - A* awarded</i></h3>
+                <div>
+                  <p class="mb-4">
+                    Automatic pill dispenser to provide medication at right intervals and quantities. <br/>
+                    Integrated a 16x2 LCD character display, motion detector, motorised platter with indexing, buzzer and WiFi interface for connected devices. <br/>
+                    Designed and 3D printed the mechanical hardware which was driven by a Raspberry Pi Zero SBC with additional control electronics. <br/>
+                    Developed in Python, HTML5, JavaScript.
+                  </p>
+                </div>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--resume"
+                  href="assets/Smart Medicine Dispenser.pdf"
+                >
+                  View DevLog
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--resume"
+                  style="margin-left: 1.5rem;"
+                  href="https://github.com/randomuserhi/Smart-Pill-Dispenser"
+                >
+                  Source Code
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="https://github.com/randomuserhi/Smart-Pill-Dispenser" target="_blank">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <img
+                      alt="Project Image"
+                      class="img-fluid"
+                      src="assets/pilldispenser.png"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Computer Science Project<br/><i>A level - A* awarded</i></h3>
+                <div>
+                  <p class="mb-4">
+                    Implemented a multiplayer server authorative game in Unity.<br/>
+                    Features include client side prediction, high tolerance for latency and packet loss, server rollback.<br>
+                    Based on Valve's Source Multiplayer Networking design.
+                  </p>
+                </div>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--resume"
+                  href="assets/multiplayer.pdf"
+                >
+                  View DevLog
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--resume"
+                  style="margin-left: 1.5rem;"
+                  href="https://github.com/randomuserhi/Enter-The-Dead-Zone"
+                >
+                  Source Code
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="https://github.com/randomuserhi/Enter-The-Dead-Zone" target="_blank">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <img
+                      alt="Project Image"
+                      class="img-fluid"
+                      src="assets/alevel.png"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Cambridge Blue Plaques<br/><i>Website</i></h3>
+                <div>
+                  <p class="mb-4">
+                    Created the website showcasing the Blue Plaques around Cambridge.<br/>
+                    Received appreciation award from Mayor of Cambridge.<br/>                    
                   </p>
                 </div>
                 <p class="footer__text" style="color: white;">
@@ -403,60 +668,6 @@
           </div>
           <!-- /END Project -->
 
-          <!-- Notice: each .row is a project -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Smart WiFi Pill Dispenser</h3>
-                <div>
-                  <p class="mb-4">
-                    Automatic pill dispenser to provide medication at right intervals and quantities. <br/>
-                    Integrated a 16x2 LCD character display, motion detector, motorised platter with indexing, buzzer and WiFi interface for connected devices. <br/>
-                    Designed and 3D printed the mechanical hardware which was driven by a Raspberry Pi Zero SBC with additional control electronics. <br/>
-                    Developed in Python, HTML5, JavaScript.
-                  </p>
-                </div>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn cta-btn--resume"
-                  href="assets/Smart Medicine Dispenser.pdf"
-                >
-                  About
-                </a>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn"
-                  style="color: white;"
-                  href="https://github.com/randomuserhi/Smart-Pill-Dispenser"
-                >
-                  Source Code
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer">
-                  <div
-                    data-tilt
-                    data-tilt-max="4"
-                    data-tilt-glare="true"
-                    data-tilt-max-glare="0.5"
-                    class="thumbnail rounded js-tilt"
-                  >
-                    <img
-                      alt="Project Image"
-                      class="img-fluid"
-                      src="assets/pilldispenser.png"
-                    />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- /END Project -->
-
         </div>
       </div>
     </section>
@@ -494,6 +705,7 @@
                 <div>
                   <p class="mb-4">
                     <span class="text-color-main"><b>A Level:</b></span> Further Maths (D1), Maths (D1), Physics (D1), Computer Science (A*), Extended Project Qualification (A*).<br/>
+                    <br/>
                     <span class="text-color-main"><b>GCSE:</b></span> Further Maths (A^), Maths (9/A*), Computer Science (9/A*), Physics (9/A*), Design & Tech (9/A*), Chemistry (9/A*), Biology (8/A*-A), Art & Design (8/A*-A), English Language (8/A*-A), Literature (5/strong pass).
                   </p>
                 </div>
@@ -523,6 +735,24 @@
           </div>
           <!-- /END Project -->
 
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg">
+              <div class="experiences-wrapper__text load-hidden">
+                <h3 class="experiences-wrapper__text-title">Sports and Other</h3>
+                <div>
+                  <p class="mb-4">
+                    Rowing (bow position)<br/>
+                    Hackathons<br/>
+                    Project Euler<br/>
+                    Go and Chess (casual)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
         </div>
       </div>
     </section>
@@ -533,13 +763,12 @@
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <div class="contact-wrapper load-hidden">
-          <p class="contact-wrapper__text">Email: christopher.nano@gmail.com</p>
-          <p class="contact-wrapper__text">Phone: 07479 756024</p>
+          <p class="contact-wrapper__text">Contact me via LinkedIn</p>
           <a
             rel="noreferrer"
             target="_blank"
             class="cta-btn cta-btn--resume"
-            href="mailto:christopher.nano@gmail.com"
+            href="https://www.linkedin.com/in/christopher-e-hong-teo"
             >Call to Action</a
           >
         </div>
@@ -567,7 +796,6 @@
 
         <hr />
 
-        <!-- Notice: if you want to give me some credit, it will be huge for me! if not, put your data on it -->
         <p class="footer__text">
           © 2022 - 
           <a rel="noreferrer" href="https://github.com/randomuserhi" target="_blank"

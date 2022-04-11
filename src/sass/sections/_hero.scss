@@ -56,6 +56,10 @@
     justify-content: start;
     margin-bottom: 3.2rem;
 
+    @include respond(tab-port) {
+      justify-content: center;
+    }
+
     a {
       display: flex;
       flex-direction: column;
