@@ -18,7 +18,7 @@
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
 
     <!-- Todo: put here your site title -->
-    <title>Christopher E-Hong Teo | Developer</title>
+    <title>Christopher Teo | Developer</title>
     <!-- Todo: add some coding keywords below - e.g: (javascript, yourusername, etc) -->
     <meta name="keywords" content="randomuserhi, Christopher E-Hong Teo, Javascript, HTML, CSS, C/C++, C#, Python, MatLab, Unity" />
     <!-- Todo: improve your SEO by adding a small description of you -->
@@ -43,7 +43,7 @@
     <section id="hero" class="jumbotron">
       <div class="container">
         <h1 class="hero-title load-hidden">
-          Hi, my name is <span class="text-color-main">Christopher E-Hong Teo</span>
+          Hi, my name is <span class="text-color-main">Christopher Teo</span>
           <br />
           Computer Science Undergraduate,<br />
           Durham University.
@@ -88,14 +88,14 @@
           <div class="col-md-6 col-sm-12">
             <div class="about-wrapper__info load-hidden">
               <p class="about-wrapper__info-text">
-                Computer science undergraduate student at Durham University with more than 5 years of developing experience. Previous projects at MediaTek, Toshiba and AIXTRON. Skilled in C/C++, C#, HLSL, Java, Javascript, HTML, CSS, Python and MatLab. Proficient with 3D and web development technologies such as Unity, Unreal, Node.js, React.js, Three.js, Parcel.js, TensorFlow and OpenSfM. Interested in Machine Learning, Neural Networks, Physics Engines and Game Design.
+                Computer science undergraduate student at Durham University with more than 5 years of developing experience. Previous work experience at MediaTek, Toshiba and AIXTRON. Skilled in C/C++, C# (.Net and Core), HLSL, Java, Javascript, Typescript, HTML, CSS, SCSS, Python and MatLab. Proficient with 3D and web development technologies such as Unity, Unreal, Node.js, React.js, Three.js, Parcel.js, TensorFlow and OpenSfM. Interested in Machine Learning, Neural Networks, Physics Engines and Game Design.
               </p>
               <span class="d-flex mt-3">
                 <a
                   rel="noreferrer"
                   target="_blank"
                   class="cta-btn cta-btn--resume"
-                  href="assets/resume.pdf"
+                  href="assets/Christopher_Teo_CV_2022_04_public.pdf"
                 >
                   View CV / Resume
                 </a>
@@ -117,12 +117,13 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="experiences-wrapper__text load-hidden">
-                <h3 class="experiences-wrapper__text-title">Data Collection and 3D Reconstruction using OpenSfM</h3>
+                <h3 class="experiences-wrapper__text-title">Spherical Image Collection and 3D Reconstruction</h3>
                 <div>
                   <p class="mb-4">
-                    Collected equirectangular images of Cambridge and reconstructed 3D models of the city for visual deep learning research.<br/>
-                    Reconstruction performed using OpenSfM library running on GPU rack with multiple nvidia cards.<br/>
-                    Programmed tool to extract GPS quardinates and Fisheye image from RAW files.
+                    Collected spherical/equirectangular images of Cambridge to create point clouds which when put in a mesh, formed a 3D model of the city.</br>
+                    Programmed tool to extract GPS coordinates and fisheye image from RAW files.<br/>
+                    Reconstruction performed using OpenSfM library running on GPU rack with multiple nvidia cards.<br/>                    
+                    For computer vision deep learning research.<br/>
                   </p>
                 </div>
                 <p class="footer__text">
@@ -143,7 +144,7 @@
                   class="cta-btn text-color-main"
                   href="#!"
                 >
-                  Source Code
+                  Source
                 </a>-->
               </div>
             </div>
@@ -302,7 +303,7 @@
                 <h3 class="project-wrapper__text-title">Olympic Oracle<br/><i>Durhack 2022 - Winner</i></h3>
                 <div>
                   <p class="mb-4">
-                    Platinum prize (sponsored by Alteryx) winner of Durhack 2022 where my team made a data analysist program to predict Olympic medal winners over 24 hours.<br/>
+                    Platinum prize winner (sponsored by Alteryx) of Durhack 2022 (24 hour coding marathon) where my team made a data analysis program to predict Olympic medal winners.<br/>
                     I implemented the neural network back-end using TensorFlow.<br/>
                     This performed machine learning on past data to predict the chances of an athlete possessing certain physical characteristics winning a gold, silver or bronze medal at the Olympics.
                   </p>
@@ -313,7 +314,7 @@
                   class="cta-btn cta-btn--resume"
                   href="https://devpost.com/software/olympic-oracle"
                 >
-                  View DevPost
+                  DevLog
                 </a>
                 <a
                   rel="noreferrer"
@@ -322,7 +323,7 @@
                   style="margin-left: 1.5rem;"
                   href="https://github.com/johnny-stevie/Durhack2022"
                 >
-                  Source Code
+                  Source
                 </a>
               </div>
             </div>
@@ -364,7 +365,7 @@
                   rel="noreferrer"
                   target="_blank"
                   class="cta-btn cta-btn--resume"
-                  href="http://www.kennano.com/cteo/Muffin_Coursework.mp4"
+                  href="assets/Muffin_Coursework.mp4"
                 >
                   Showcase
                 </a>
@@ -381,7 +382,7 @@
             </div>
             <div class="col-lg-8 col-sm-12">
               <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="http://www.kennano.com/cteo/Muffin_Coursework.mp4" target="_blank">
+                <a rel="noreferrer" href="assets/Muffin_Coursework.mp4" target="_blank">
                   <div
                     data-tilt
                     data-tilt-max="4"
@@ -389,11 +390,9 @@
                     data-tilt-max-glare="0.5"
                     class="thumbnail rounded js-tilt"
                   >
-                    <img
-                      alt="Project Image"
-                      class="img-fluid"
-                      src="assets/muffins.png"
-                    />
+                    <video autoplay muted loop playsinline class="img-fluid" style="display:block;">
+                      <source src="assets/muffins.mp4" type="video/mp4">
+                    </video>
                   </div>
                 </a>
               </div>
@@ -409,7 +408,7 @@
                 <div>
                   <p class="mb-4">
                     Implemented from the ground up a neural network for classifying images.<br/>
-                    Uses 6 convolutional layers, pooling and flattening layers and 3 dense layers.<br/>
+                    Uses 3 alternating convolutional (comprising 5 filters each) and pooling layers, a flattening layer and 3 dense layers.<br/>
                     Wrote an API for C++ Eigen library so Unity/C# can use it for matrix calculations.<br/>
                     Runs on GPU using HLSL.</br>
                     CNN distinguishes cars from trucks.</br>
@@ -429,7 +428,7 @@
                   class="cta-btn cta-btn--resume"
                   href="https://github.com/randomuserhi/CNN"
                 >
-                  Source Code
+                  Source
                 </a>
               </div>
             </div>
@@ -443,11 +442,15 @@
                     data-tilt-max-glare="0.5"
                     class="thumbnail rounded js-tilt"
                   >
-                    <img
+                    <!--<img
                       alt="Project Image"
                       class="img-fluid"
                       src="assets/cnn.png"
-                    />
+                    />-->
+                    <video autoplay muted loop playsinline class="img-fluid" style="display:block;">
+                      <source src="assets/CNN.mp4" type="video/mp4">
+                      Your browser does not support HTML5 video.
+                    </video>
                   </div>
                 </a>
               </div>
@@ -495,7 +498,7 @@
                     data-tilt-max-glare="0.5"
                     class="thumbnail rounded js-tilt"
                   >
-                    <video autoplay muted loop class="img-fluid">
+                    <video autoplay muted loop playsinline class="img-fluid" style="display:block;">
                       <source src="assets/rendering.mp4" type="video/mp4">
                       Your browser does not support HTML5 video.
                     </video>
@@ -525,7 +528,7 @@
                   class="cta-btn cta-btn--resume"
                   href="assets/Smart Medicine Dispenser.pdf"
                 >
-                  View DevLog
+                  DevLog
                 </a>
                 <a
                   rel="noreferrer"
@@ -534,13 +537,13 @@
                   style="margin-left: 1.5rem;"
                   href="https://github.com/randomuserhi/Smart-Pill-Dispenser"
                 >
-                  Source Code
+                  Source
                 </a>
               </div>
             </div>
             <div class="col-lg-8 col-sm-12">
               <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="https://github.com/randomuserhi/Smart-Pill-Dispenser" target="_blank">
+                <a rel="noreferrer" href="assets/Smart Medicine Dispenser.pdf" target="_blank">
                   <div
                     data-tilt
                     data-tilt-max="4"
@@ -578,7 +581,16 @@
                   class="cta-btn cta-btn--resume"
                   href="assets/multiplayer.pdf"
                 >
-                  View DevLog
+                  DevLog
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--resume"
+                  style="margin-left: 1.5rem;"
+                  href="assets/Testing.mp4"
+                >
+                  Video
                 </a>
                 <a
                   rel="noreferrer"
@@ -587,13 +599,13 @@
                   style="margin-left: 1.5rem;"
                   href="https://github.com/randomuserhi/Enter-The-Dead-Zone"
                 >
-                  Source Code
+                  Source
                 </a>
               </div>
             </div>
             <div class="col-lg-8 col-sm-12">
               <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="https://github.com/randomuserhi/Enter-The-Dead-Zone" target="_blank">
+                <a rel="noreferrer" href="assets/Testing.mp4" target="_blank">
                   <div
                     data-tilt
                     data-tilt-max="4"
@@ -601,11 +613,9 @@
                     data-tilt-max-glare="0.5"
                     class="thumbnail rounded js-tilt"
                   >
-                    <img
-                      alt="Project Image"
-                      class="img-fluid"
-                      src="assets/alevel.png"
-                    />
+                    <video autoplay muted loop playsinline class="img-fluid" style="display:block;">
+                      <source src="assets/multiplayer.mp4" type="video/mp4">
+                    </video>
                   </div>
                 </a>
               </div>
@@ -642,7 +652,7 @@
                   class="cta-btn text-color-main"
                   href="#!"
                 >
-                  Source Code
+                  Source
                 </a>-->
               </div>
             </div>
@@ -686,7 +696,8 @@
                 <h3 class="experiences-wrapper__text-title">Durham University</h3>
                 <div>
                   <p class="mb-4">
-                    First Year student.
+                    BSc Computer Science (in progress).<br/>
+                    <span class="text-color-main"><b>First Year:</b></span> Programming, Computational Thinking, Algorithms and Data Structures, Computer Systems, Mathematics for Computer Science, Computational Tools for Engineers and Scientists.
                   </p>
                 </div>
                 <p class="footer__text">
@@ -706,7 +717,26 @@
                   <p class="mb-4">
                     <span class="text-color-main"><b>A Level:</b></span> Further Maths (D1), Maths (D1), Physics (D1), Computer Science (A*), Extended Project Qualification (A*).<br/>
                     <br/>
-                    <span class="text-color-main"><b>GCSE:</b></span> Further Maths (A^), Maths (9/A*), Computer Science (9/A*), Physics (9/A*), Design & Tech (9/A*), Chemistry (9/A*), Biology (8/A*-A), Art & Design (8/A*-A), English Language (8/A*-A), Literature (5/strong pass).
+                    <a
+                      rel="noreferrer"
+                      target="_blank"
+                      class="cta-btn cta-btn--hero"
+                      href="assets/EPQ-ceteo.pdf"
+                    >
+                      EPQ - Paper
+                    </a>
+                    <a
+                      rel="noreferrer"
+                      target="_blank"
+                      class="cta-btn cta-btn--hero"
+                      style="margin-left: 1.5rem;"
+                      href="assets/EPQ presentation.mp4"
+                    >
+                      EPQ - Talk
+                    </a>
+                    <br/><br/>
+                    <span class="text-color-main"><b>GCSE:</b></span> Further Maths (A^), Maths (9/A*), Computer Science (9/A*), Physics (9/A*), Design & Tech (9/A*), Chemistry (9/A*), Biology (8/A*-A), Art & Design (8/A*-A), English Language (8/A*-A), Literature (5/strong pass).<br/><br/>
+                    Years 9 - 13.
                   </p>
                 </div>
                 <p class="footer__text">
@@ -721,10 +751,10 @@
           <div class="row">
             <div class="col-lg">
               <div class="experiences-wrapper__text load-hidden">
-                <h3 class="experiences-wrapper__text-title">St Faith's</h3>
+                <h3 class="experiences-wrapper__text-title">St Faith's School</h3>
                 <div>
                   <p class="mb-4">
-                    Yr 4 - 8.
+                    Years 4 - 8.
                   </p>
                 </div>
                 <p class="footer__text">
@@ -742,10 +772,10 @@
                 <h3 class="experiences-wrapper__text-title">Sports and Other</h3>
                 <div>
                   <p class="mb-4">
-                    Rowing (bow position)<br/>
-                    Hackathons<br/>
-                    Project Euler<br/>
-                    Go and Chess (casual)
+                    Rowing.<br/>
+                    Hackathons.<br/>
+                    Project Euler.<br/>
+                    Go and Chess.
                   </p>
                 </div>
               </div>
@@ -761,15 +791,15 @@
     <!-- **** Contact Section **** -->
     <section id="contact">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
+        <!--<h2 class="section-title">Contact</h2>-->
         <div class="contact-wrapper load-hidden">
-          <p class="contact-wrapper__text">Contact me via LinkedIn</p>
+          <!--<p class="contact-wrapper__text">Email: christopher@kennano.com</p>-->
           <a
             rel="noreferrer"
             target="_blank"
             class="cta-btn cta-btn--resume"
-            href="https://www.linkedin.com/in/christopher-e-hong-teo"
-            >Call to Action</a
+            href="mailto:christopher@kennano.com"
+            >Contact me</a
           >
         </div>
       </div>

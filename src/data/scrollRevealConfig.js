@@ -39,48 +39,48 @@ export const targetElements = [
   {
     element: ".about-wrapper__image",
     animation: {
-      delay: 600,
+      delay: 300,
       origin: "bottom",
     },
   },
   {
     element: ".about-wrapper__info",
     animation: {
-      delay: 1000,
+      delay: 500,
       origin: window.innerWidth > 768 ? "left" : "bottom",
     },
   },{
     element: ".experiences-wrapper__text",
     animation: {
-      delay: 500,
+      delay: 250,
       origin: window.innerWidth > 768 ? "left" : "bottom",
     },
   },
   {
     element: ".experiences-wrapper__image",
     animation: {
-      delay: 1000,
+      delay: 400,
       origin: window.innerWidth > 768 ? "right" : "bottom",
     },
   },
   {
     element: ".project-wrapper__text",
     animation: {
-      delay: 500,
+      delay: 250,
       origin: window.innerWidth > 768 ? "left" : "bottom",
     },
   },
   {
     element: ".project-wrapper__image",
     animation: {
-      delay: 1000,
+      delay: 400,
       origin: window.innerWidth > 768 ? "right" : "bottom",
     },
   },
   {
     element: ".contact-wrapper",
     animation: {
-      delay: 800,
+      delay: 300,
       origin: "bottom",
     },
   },
