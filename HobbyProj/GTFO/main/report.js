@@ -324,17 +324,19 @@ let achievements = {
                 let prev;
                 for (let i = 0; i < player.stateTimeline.length; ++i) {
                     let e = player.stateTimeline[i];
-                    if (e.type === "Down")
-                        prev = e.timestamp;
+                    if (e.type === "Down") {
+                        if (i === player.stateTimeline.length - 1) {
+                            time += report.timetaken - e.timestamp;
+                            prev = undefined;
+                        }
+                        else
+                            prev = e.timestamp;
+                    }
                     else if (e.type === "Checkpoint") {
                         prev = undefined;
                     }
                     else if (e.type === "Revive" && RHU.exists(prev)) {
                         time += e.timestamp - prev;
-                        prev = undefined;
-                    }
-                    if (i === player.stateTimeline.length - 1) {
-                        time += report.timetaken - e.timestamp;
                         prev = undefined;
                     }
                 }
