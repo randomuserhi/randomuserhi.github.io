@@ -123,7 +123,6 @@ let achievements = {
                 let damage = 0;
                 for (let g in player.gears) {
                     let gear = player.gears[g];
-                    console.log(g);
                     if (report.spec.gear[g].type === "tool")
                         continue;
                     damage += gear.damage;
