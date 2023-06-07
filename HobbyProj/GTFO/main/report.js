@@ -384,6 +384,37 @@ let achievements = {
                 });
         }
     },
+    "lazy": {
+        precendence: 70,
+        name: "Lazy",
+        alt: "Deal more damage with your sentry than your guns.",
+        award: function (report) {
+            for (let player of report.players.values()) {
+                let playerDamage = 0;
+                for (let g in player.gears) {
+                    let gear = player.gears[g];
+                    if (report.spec.gear[g].type === "tool" || report.spec.gear[g].type === "melee")
+                        continue;
+                    playerDamage += gear.damage;
+                }
+                let sentryDamage = 0;
+                for (let g in player.gears) {
+                    let gear = player.gears[g];
+                    if (report.spec.gear[g].type !== "tool")
+                        continue;
+                    if (report.spec.gear[g].archytypeName.toLowerCase().includes("sentry")) {
+                        sentryDamage += gear.damage;
+                    }
+                }
+                if (sentryDamage > playerDamage) {
+                    player.achievements.add({
+                        type: "lazy",
+                        text: `Sentry did <span style="color: #e9bc29">${Math.ceil((sentryDamage / playerDamage - 1) * 100)}%</span> more damage.`
+                    });
+                }
+            }
+        }
+    },
 };
 let GTFOReport = function (type, json) {
     if (type != "HOST")
