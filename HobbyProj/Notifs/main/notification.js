@@ -37,6 +37,13 @@ RHU.import(RHU.module({ trace: new Error(),
                 }
                 this.entityIds.style.display = "block";
             }
+            if (RHU.exists(notif.user_id)) {
+                let el = document.createElement("a");
+                el.style.cursor = "pointer";
+                el.innerText = `${notif.user_id}`;
+                this.user.append(el);
+                this.user.style.display = "block";
+            }
             if (RHU.exists(notif.metadata)) {
                 if (RHU.exists(notif.metadata.error_code)) {
                     this.errorCode.innerText = `Error Code: ${notif.metadata.error_code}`;
@@ -92,6 +99,7 @@ RHU.import(RHU.module({ trace: new Error(),
                 <div class="notif-cta" rhu-id="cta">
                     <button class="notif-cta-btn"></button>
                 </div>
+                <p class="notif-entity-id" rhu-id="user"></p>
             </div>
             `, {
             element: `<div class="notification"></div>`

@@ -14,6 +14,9 @@ RHU.import(RHU.module({ trace: new Error(),
                 type: notif.type,
                 status: notif.status,
             };
+            if (RHU.exists(notif.user_id)) {
+                json.user_id = notif.user_id;
+            }
             if (RHU.exists(notif.entity_id)) {
                 json.entity_id = notif.entity_id;
             }

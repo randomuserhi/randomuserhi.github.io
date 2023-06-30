@@ -1889,8 +1889,9 @@ Error code: &lterror_code&gt`,
         link: `hooks/useDeployment/useDeployment.tsx#L118`,
         title: `Successfully published to production`,
         body: ``,
-        type: "user",
+        type: "system",
         status: "success",
+        user_id: "<user>",
         message: {
             action: "published",
             sub_entity: "to production"
