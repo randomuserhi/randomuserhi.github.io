@@ -1727,9 +1727,12 @@ Error code: &lterror_code&gt`,
         type: "user",
         status: "error",
         message: {
-            title: "Invalid JSON"
+            action: "parse",
+            sub_entity: "JSON"
         },
-        categories: []
+        categories: [
+            "{state} {action} {entity}"
+        ]
     },
     {
         link: `screens/data-store-details/components/DataStoreDetails/index.tsx#L168`,
