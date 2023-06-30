@@ -1564,9 +1564,6 @@ Error code: &lterror_code&gt`,
             sub_entity: "dashboards",
             body: "<error_message>"
         },
-        metadata: {
-            call_to_action: "Try again"
-        },
         categories: [
             "{state} {action} {entity}"
         ]
@@ -1635,8 +1632,7 @@ Error code: &lterror_code&gt`,
             body: "<error_message>"
         },
         metadata: {
-            error_code: "<error_code>",
-            call_to_action: "Try again"
+            error_code: "<error_code>"
         },
         categories: [
             "{state} {action} {entity}"
