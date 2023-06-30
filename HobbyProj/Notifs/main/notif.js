@@ -2,12 +2,13 @@ let notifications = [
     {
         link: `components/atoms/CreateSelect/index.tsx#L98`,
         title: `Error creating new option`,
-        body: "&ltfail_message&gt",
+        body: "&lterror_message&gt",
         type: "user",
         status: "error",
         message: {
             action: "create",
-            sub_entity: "option"
+            sub_entity: "option",
+            body: "<error_message>"
         },
         categories: [
             "{state} {action} {entity}"
@@ -23,7 +24,11 @@ Error code: &lterror_code&gt`,
         status: "error",
         message: {
             action: "create",
-            sub_entity: "project"
+            sub_entity: "project",
+            body: "<error_message>"
+        },
+        metadata: {
+            error_code: "<error_code>"
         },
         categories: [
             "{state} {action} {entity}"
