@@ -35,21 +35,24 @@ RHU.import(RHU.module({ trace: new Error(),
                 this.reload();
             });
             this.filter.addEventListener("change", () => {
-                let filter = this.filter.value;
-                let values = [...this.list];
-                if (filter.trim() === "") {
-                    values = values.sort((a, b) => {
-                        return similar(b[1], filter) - similar(a[1], filter);
-                    }).splice(0, values.length < 10 ? values.length : 10);
-                }
-                let fragment = new DocumentFragment();
-                for (let value of values) {
-                    fragment.append(value[0]);
-                }
-                this.table.replaceChildren(fragment);
-                let computed = window.getComputedStyle(this.table);
-                this.filter.style.width = `${parseInt(computed.width) - 40}px`;
+                this.filterOperation();
             });
+        };
+        selectResource.prototype.filterOperation = function () {
+            let filter = this.filter.value;
+            let values = [...this.list];
+            if (filter.trim() !== "") {
+                values = values.sort((a, b) => {
+                    return similar(b[1], filter) - similar(a[1], filter);
+                }).splice(0, values.length < 10 ? values.length : 10);
+            }
+            let fragment = new DocumentFragment();
+            for (let value of values) {
+                fragment.append(value[0]);
+            }
+            this.table.replaceChildren(fragment);
+            let computed = window.getComputedStyle(this.table);
+            this.filter.style.width = `${parseInt(computed.width) - 40}px`;
         };
         selectResource.prototype.reload = function () {
             this.list.clear();
@@ -77,6 +80,7 @@ RHU.import(RHU.module({ trace: new Error(),
             this.table.replaceChildren(fragment);
             let computed = window.getComputedStyle(this.table);
             this.filter.style.width = `${parseInt(computed.width) - 40}px`;
+            this.filterOperation();
         };
         RHU.Macro(selectResource, "selectResource", `
             <div style="
