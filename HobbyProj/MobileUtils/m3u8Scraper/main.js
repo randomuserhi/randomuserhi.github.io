@@ -244,7 +244,7 @@ RHU.import(RHU.module({ trace: new Error(),
         `, {
             element: `<div style="
                 z-index: 9999;
-                position: absolute;
+                position: fixed;
                 top: 0;
                 left: 0;
                 background-color: #202124;
@@ -260,7 +260,7 @@ RHU.import(RHU.module({ trace: new Error(),
                 border-color: black;
                 border-width: 1px;
                 z-index: 9999;
-                position: absolute;
+                position: fixed;
                 right: 10px;
                 bottom: 10px;
                 padding: 10px;
