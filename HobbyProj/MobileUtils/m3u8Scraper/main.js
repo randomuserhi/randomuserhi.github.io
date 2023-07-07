@@ -29,7 +29,6 @@ RHU.import(RHU.module({ trace: new Error(),
         }
         let { RHU } = window.RHU.require(window, this);
         let selectResource = function () {
-            this.mount = mount;
             this.list = new Map();
             this.reload();
             this.refresh.addEventListener("click", () => {
@@ -70,7 +69,7 @@ RHU.import(RHU.module({ trace: new Error(),
                 `).children[0];
                 let button = row.children[0].children[0];
                 button.addEventListener("click", () => {
-                    this.mount.segments.reload(name);
+                    mount.segments.reload(name);
                 });
                 this.list.set(row, name);
                 fragment.append(row);
@@ -100,7 +99,6 @@ RHU.import(RHU.module({ trace: new Error(),
             "></div>`
         });
         let downloadSegments = function () {
-            this.mount = mount;
             this.refresh.addEventListener("click", () => {
                 this.reload(this.url.value);
             });
