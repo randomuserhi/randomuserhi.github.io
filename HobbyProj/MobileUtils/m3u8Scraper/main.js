@@ -243,6 +243,9 @@ RHU.import(RHU.module({ trace: new Error(),
             <rhu-macro rhu-id="segments" rhu-type="downloadSegments"></rhu-macro>
         `, {
             element: `<div style="
+                width: 100%;
+                height: 100%;
+                overflow: auto;
                 z-index: 9999;
                 position: fixed;
                 top: 0;
