@@ -56,7 +56,7 @@ RHU.import(RHU.module({ trace: new Error(),
                 let row = RHU.Macro.parseDomString(`
                     <tr>
                         <td>
-                            <button style="width: 30px; height: 30px">+</button>
+                            <button style="border-radius: 4px; background-color: white; width: 30px; height: 30px">+</button>
                         </td>
                         <td>
                             <span style="text-overflow: ellipsis; color: white;">${name}</span>
@@ -77,8 +77,8 @@ RHU.import(RHU.module({ trace: new Error(),
             width: 100%;
             margin: 0px; 10px;
             ">
-                <button style="width: 30px; height: 30px;" rhu-id="refresh">@</button>
-                <input rhu-id="filter" style="height: 30px; width: 90%;" type="text">
+                <button style="border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="refresh">@</button>
+                <input rhu-id="filter" style="border-radius: 4px; background-color: white; height: 30px; width: 90%;" type="text">
             </div>
             <table rhu-id="table" style="
                 width: 100%;
@@ -148,7 +148,7 @@ RHU.import(RHU.module({ trace: new Error(),
                 let row = RHU.Macro.parseDomString(`
                     <tr>
                         <td>
-                            <button style="width: 30px; height: 30px;">V</button>
+                            <button style="border-radius: 4px; background-color: white; width: 30px; height: 30px;">V</button>
                         </td>
                         <td>
                             <span style="text-overflow: ellipsis; color: white;">${segment.name}</span>
@@ -205,9 +205,9 @@ RHU.import(RHU.module({ trace: new Error(),
             width: 100%;
             margin: 0px; 10px;
             ">
-                <button style="width: 30px; height: 30px;" rhu-id="refresh">@</button>
-                <input rhu-id="url" style="height: 30px; width: 80%;" type="text">
-                <button style="width: 30px; height: 30px;" rhu-id="get">V</button>
+                <button style="border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="refresh">@</button>
+                <input rhu-id="url" style="background-color: white; border-radius: 4px; height: 30px; width: 80%;" type="text">
+                <button style="border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="get">V</button>
             </div>
             <table rhu-id="table" style="
                 width: 100%;
@@ -236,7 +236,7 @@ RHU.import(RHU.module({ trace: new Error(),
             width: 100%;
             margin: 0px; 10px;
             ">
-                <button style="width: 30px; height: 30px;" rhu-id="close">X</button>
+                <button style="border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="close">X</button>
             </div>
             <!-- content -->
             <rhu-macro rhu-id="select" rhu-type="selectResource"></rhu-macro>
@@ -255,6 +255,11 @@ RHU.import(RHU.module({ trace: new Error(),
         let mount = document.createMacro("appmount");
         document.body.append(mount);
         let trigger = RHU.Macro.parseDomString(`<button style="
+                border-radius: 4px; 
+                background-color: white; 
+                border-style: solid;
+                border-color: black;
+                border-width: 1px;
                 z-index: 9999;
                 position: absolute;
                 right: 10px;
