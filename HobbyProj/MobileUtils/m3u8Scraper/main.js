@@ -29,7 +29,7 @@ RHU.import(RHU.module({ trace: new Error(),
         }
         let { RHU } = window.RHU.require(window, this);
         let selectResource = function () {
-            this.mount = this.parentElement;
+            this.mount = mount;
             this.list = new Map();
             this.reload();
             this.refresh.addEventListener("click", () => {
@@ -45,6 +45,8 @@ RHU.import(RHU.module({ trace: new Error(),
                     fragment.append(value[0]);
                 }
                 this.table.replaceChildren(fragment);
+                let computed = window.getComputedStyle(this.table);
+                this.filter.style.width = `${parseInt(computed.width) - 40}px`;
             });
         };
         selectResource.prototype.reload = function () {
@@ -71,24 +73,23 @@ RHU.import(RHU.module({ trace: new Error(),
                 fragment.append(row);
             }
             this.table.replaceChildren(fragment);
+            let computed = window.getComputedStyle(this.table);
+            this.filter.style.width = `${parseInt(computed.width) - 40}px`;
         };
         RHU.Macro(selectResource, "selectResource", `
             <div style="
-            width: 100%;
             margin: 0px; 10px;
             ">
                 <button style="border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="refresh">@</button>
-                <input rhu-id="filter" style="border-radius: 4px; background-color: white; height: 30px; width: 90%;" type="text">
+                <input rhu-id="filter" style="border-radius: 4px; background-color: white; height: 30px;" type="text">
             </div>
             <table rhu-id="table" style="
-                width: 100%;
             ">
             </table>
         `, {
             element: `<div style="
             color: white;
             padding: 10px;
-            width: 100%;
             margin-top: 10px;
             border-top-style: solid;
             border-top-width: 1px;
@@ -96,7 +97,7 @@ RHU.import(RHU.module({ trace: new Error(),
             "></div>`
         });
         let downloadSegments = function () {
-            this.mount = this.parentElement;
+            this.mount = mount;
             this.refresh.addEventListener("click", () => {
                 this.reload(this.url.value);
             });
@@ -178,6 +179,8 @@ RHU.import(RHU.module({ trace: new Error(),
                 fragment.append(row);
             }
             this.table.replaceChildren(fragment);
+            let computed = window.getComputedStyle(this.table);
+            this.url.style.width = `${parseInt(computed.width) - 40}px`;
         };
         downloadSegments.prototype.download = function (i = 0) {
             if (!RHU.exists(this.segments) || this.segments.length === 0) {
@@ -202,22 +205,19 @@ RHU.import(RHU.module({ trace: new Error(),
         };
         RHU.Macro(downloadSegments, "downloadSegments", `
             <div style="
-            width: 100%;
             margin: 0px; 10px;
             ">
                 <button style="border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="refresh">@</button>
-                <input rhu-id="url" style="background-color: white; border-radius: 4px; height: 30px; width: 80%;" type="text">
                 <button style="border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="get">V</button>
+                <input rhu-id="url" style="background-color: white; border-radius: 4px; height: 30px;" type="text">
             </div>
             <table rhu-id="table" style="
-                width: 100%;
             ">
             </table>
         `, {
             element: `<div style="
             color: white;
             padding: 10px;
-            width: 100%;
             margin-top: 10px;
             border-top-style: solid;
             border-top-width: 1px;
@@ -233,7 +233,6 @@ RHU.import(RHU.module({ trace: new Error(),
         RHU.Macro(appmount, "appmount", `
             <!-- navbar -->
             <div style="
-            width: 100%;
             margin: 0px; 10px;
             ">
                 <button style="border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="close">X</button>
@@ -247,7 +246,6 @@ RHU.import(RHU.module({ trace: new Error(),
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100%;
                 background-color: #202124;
                 display: none;
             "></div>`
