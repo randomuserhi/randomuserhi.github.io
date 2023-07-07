@@ -87,7 +87,7 @@ RHU.import(RHU.module({ trace: new Error(),
             margin: 0px; 10px;
             ">
                 <button style="color: black; border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="refresh">@</button>
-                <input rhu-id="filter" style="border-radius: 4px; background-color: white; height: 30px;" type="text">
+                <input rhu-id="filter" style="color: black; border-radius: 4px; background-color: white; height: 30px;" type="text">
             </div>
             <table rhu-id="table" style="
             ">
@@ -109,10 +109,30 @@ RHU.import(RHU.module({ trace: new Error(),
             this.get.addEventListener("click", () => {
                 this.download();
             });
+            this.meta.addEventListener("click", () => {
+                this.downloadMeta();
+            });
         };
         downloadSegments.prototype.reload = function (url) {
             this.url.value = url;
             fetch(url, {
+                method: "GET",
+            }).then(async (resp) => {
+                if (resp.status === 200) {
+                    let blob = await resp.blob();
+                    let text = await blob.text();
+                    this.parse(url, text);
+                }
+                else
+                    alert("Failed to GET 'index-s32.m3u8'");
+            });
+        };
+        downloadSegments.prototype.downloadMeta = function () {
+            if (this.url.value === "") {
+                alert("No URL.");
+                return;
+            }
+            fetch(this.url.value, {
                 method: "GET",
             }).then(async (resp) => {
                 if (resp.status === 200) {
@@ -122,8 +142,7 @@ RHU.import(RHU.module({ trace: new Error(),
                     a.href = blobURL;
                     a.download = `m3u8 ${new Date()}.m3u8`;
                     a.click();
-                    let text = await blob.text();
-                    this.parse(url, text);
+                    window.URL.revokeObjectURL(blobURL);
                 }
                 else
                     alert("Failed to GET 'index-s32.m3u8'");
@@ -176,6 +195,7 @@ RHU.import(RHU.module({ trace: new Error(),
                             a.href = url;
                             a.download = `${segment.name}.ts`;
                             a.click();
+                            window.URL.revokeObjectURL(url);
                         }
                         else
                             alert(`Failed to GET segment '${segment.name}'`);
@@ -202,6 +222,7 @@ RHU.import(RHU.module({ trace: new Error(),
                     a.href = url;
                     a.download = `${this.segments[i].name}.ts`;
                     a.click();
+                    window.URL.revokeObjectURL(url);
                     this.download(++i);
                 }
                 else
@@ -213,7 +234,8 @@ RHU.import(RHU.module({ trace: new Error(),
             margin: 0px; 10px;
             ">
                 <button style="color: black; border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="refresh">@</button>
-                <input rhu-id="url" style="background-color: white; border-radius: 4px; height: 30px;" type="text">
+                <button style="color: black; border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="meta">M</button>
+                <input rhu-id="url" style="color: black; background-color: white; border-radius: 4px; height: 30px;" type="text">
                 <button style="color: black; border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="get">V</button>
             </div>
             <table rhu-id="table" style="
