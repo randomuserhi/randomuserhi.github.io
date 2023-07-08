@@ -30,7 +30,23 @@ RHU.import(RHU.module({ trace: new Error(),
         let { RHU } = window.RHU.require(window, this);
         let selectResource = function () {
             this.list = new Map();
+            this.additional = [];
+            let open = window.XMLHttpRequest.prototype.open;
+            window.XMLHttpRequest.prototype.open = (method, url) => {
+                this.additional.push(url.toString());
+                open.call(this, ...arguments);
+            };
             this.reload();
+            this.deep.addEventListener("click", () => {
+                let iframe = document.querySelector("iframe");
+                if (RHU.exists(iframe)) {
+                    let a = document.createElement("a");
+                    a.href = iframe.src;
+                    a.click();
+                }
+                else
+                    alert("no iframe");
+            });
             this.refresh.addEventListener("click", () => {
                 this.reload();
             });
@@ -57,9 +73,12 @@ RHU.import(RHU.module({ trace: new Error(),
         selectResource.prototype.reload = function () {
             this.list.clear();
             let fragment = new DocumentFragment();
-            let resources = performance.getEntriesByType("resource");
+            let resources = [];
+            for (let entry of performance.getEntriesByType("resource"))
+                resources.push(entry.name);
+            resources.push(...this.additional);
             for (let resource of resources) {
-                let name = resource.name;
+                let name = resource;
                 let row = RHU.Macro.parseDomString(`
                     <tr>
                         <td>
@@ -86,6 +105,7 @@ RHU.import(RHU.module({ trace: new Error(),
             <div style="
             margin: 0px; 10px;
             ">
+                <button style="color: black; border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="deep">^</button>
                 <button style="color: black; border-radius: 4px; background-color: white; width: 30px; height: 30px;" rhu-id="refresh">@</button>
                 <input rhu-id="filter" style="color: black; border-radius: 4px; background-color: white; height: 30px;" type="text">
             </div>
