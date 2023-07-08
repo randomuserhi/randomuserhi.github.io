@@ -157,13 +157,26 @@ RHU.import(RHU.module({ trace: new Error(),
                 method: "GET",
             }).then(async (resp) => {
                 if (resp.status === 200) {
-                    let blob = await resp.blob();
-                    let blobURL = window.URL.createObjectURL(blob);
-                    let a = document.createElement("a");
-                    a.href = blobURL;
-                    a.download = `m3u8 ${new Date()}.m3u8`;
-                    a.click();
-                    window.URL.revokeObjectURL(blobURL);
+                    let title = `m3u8 ${new Date()}`;
+                    {
+                        let blob = await resp.blob();
+                        let blobURL = window.URL.createObjectURL(blob);
+                        let a = document.createElement("a");
+                        a.href = blobURL;
+                        a.download = `${title}.m3u8`;
+                        a.click();
+                        window.URL.revokeObjectURL(blobURL);
+                    }
+                    {
+                        let json = JSON.stringify({ url: this.url.value });
+                        let blob = new Blob([json], { type: 'text/json' });
+                        let url = window.URL.createObjectURL(blob);
+                        let a = document.createElement("a");
+                        a.href = url;
+                        a.download = `${title}.json`;
+                        a.click();
+                        window.URL.revokeObjectURL(url);
+                    }
                 }
                 else
                     alert("Failed to GET 'index-s32.m3u8'");
