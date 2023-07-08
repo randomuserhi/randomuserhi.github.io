@@ -255,7 +255,7 @@ RHU.import(RHU.module({ trace: new Error(),
                     let url = window.URL.createObjectURL(blob);
                     let a = document.createElement("a");
                     a.href = url;
-                    a.download = `${this.segments[i].name}.ts`;
+                    a.download = `${this.segments[i].name}`;
                     a.click();
                     window.URL.revokeObjectURL(url);
                     this.download(++i);
