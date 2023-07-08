@@ -28,12 +28,13 @@ RHU.import(RHU.module({ trace: new Error(),
             return hits / total;
         }
         let { RHU } = window.RHU.require(window, this);
+        let open = window.XMLHttpRequest.prototype.open;
         let selectResource = function () {
             this.list = new Map();
             this.additional = [];
-            let open = window.XMLHttpRequest.prototype.open;
-            window.XMLHttpRequest.prototype.open = (method, url) => {
-                this.additional.push(url.toString());
+            let additional = this.additional;
+            window.XMLHttpRequest.prototype.open = function (method, url) {
+                additional.push(url.toString());
                 open.call(this, ...arguments);
             };
             this.reload();
