@@ -16,6 +16,12 @@
 Use this [series](https://youtu.be/8fTFEtekJno?si=1QiJVHbsBUjzwGb7) as inspiration (not necessarily a good framework though).
 - [ ] Blogs
     - [ ] React in pure JS (RHU)
+        - *Probably needs me to re-write RHU to remove a bunch of junk like RHU core library sucks*
+            - Should just include the main React-HTML functionality, WeakCollection stuff, Styles, Themes and Symbols
+            - Basically mostly stripping and removing the main RHU core library
+                - Re-factor stuff to use the new class extends syntax and avoid `Reflect.Construct` etc...
+                - Or use `Reflect.Construct` on its own without `RHU.inherit` strictly for the Weak datastructures
+        - [ ] Monaco editor showcase? - Live example
     - [ ] Deep Engine
 - [ ] Hire vs Fun showcase
     - Website should be built mainly for hireability
