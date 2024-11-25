@@ -1,0 +1,31 @@
+<!-- renderer -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- import style sheet -->
+<link rel="stylesheet" href="default.css">
+
+<head>
+	<meta charset="UTF-8">
+	<base target="_blank">
+
+	<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:;">
+
+	<title>Typescript Sample</title>
+
+	<script type="importmap">
+	{
+		"imports": {
+			"rhu": "./js3party/rhu/rhu.js",
+			"rhu/": "./js3party/rhu/",
+			"fuse.js": "./js3party/fuse/fuse.min.mjs"
+		}
+	}
+	</script>
+	<script type="module" src="./app.js"></script>
+</head>
+
+<body></body>
+
+</html>
