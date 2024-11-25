@@ -43,7 +43,7 @@ const App = () => {
     }
     /*public:*/
     interface App {
-
+        
     }
 
     const dom = html<_App & App>/**//*html*/`
