@@ -52,7 +52,7 @@ const App = () => {
         </div>
     </div>
     `;
-    html.box(dom);
+    html(dom).box();
 
     return dom as html<App>;
 };
