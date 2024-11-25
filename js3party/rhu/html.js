@@ -172,10 +172,10 @@ export const html = ((first, ...interpolations) => {
                     node = slot;
                 }
                 const slotImplementation = node[DOM];
-                let boxed = descriptor.boxed;
+                let boxed = descriptor?.boxed;
                 if (boxed === undefined)
                     boxed = slotImplementation.boxed;
-                let onChildren = descriptor.onChildren;
+                let onChildren = descriptor?.onChildren;
                 if (onChildren === undefined)
                     onChildren = slotImplementation.onChildren;
                 if (boxed || descriptor?.name !== undefined) {
