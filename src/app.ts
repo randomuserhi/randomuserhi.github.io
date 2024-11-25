@@ -28,7 +28,6 @@ const style = Style(({ css }) => {
     `;
     const body = css.class`
     flex: 1;
-    margin: 5px;
     `;
 
     return {
