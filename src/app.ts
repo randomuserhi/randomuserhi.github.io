@@ -53,7 +53,7 @@ const App = () => {
     </div>
     `;
     html.box(dom);
-    
+
     return dom as html<App>;
 };
 
