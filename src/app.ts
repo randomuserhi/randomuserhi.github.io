@@ -37,16 +37,14 @@ const style = Style(({ css }) => {
 });
 
 const App = () => {
-    /*private:*/
-    interface _App {
+    interface Private {
         readonly body: HTMLDivElement;
     }
-    /*public:*/
-    interface App {
+    interface Public {
         
     }
 
-    const dom = html<_App & App>/**//*html*/`
+    const dom = html<Private & Public>/**//*html*/`
     <div class="${theme} ${style.wrapper}">
         <div m-id="body" class="${style.body}">
         </div>
@@ -54,7 +52,7 @@ const App = () => {
     `;
     html(dom).box();
 
-    return dom as html<App>;
+    return dom as html<Public>;
 };
 
 export const app = App();
